@@ -13,7 +13,7 @@ import java.util.Map;
 @Mixin(ModMenu.class)
 public interface ModMenuAccessor {
 
-    @Accessor
+    @Accessor(remap = false)
     static Map<String, ConfigScreenFactory<?>> getConfigScreenFactories() {
         throw new UnsupportedOperationException();
     }
