@@ -21,9 +21,9 @@ dependencies {
         transitive(false)
     }
 
-    // Cloth Config Lite
-    include "me.shedaniel.cloth:cloth-config-lite-fabric:2.0.6"
-    modApi ("me.shedaniel.cloth:cloth-config-lite-fabric:2.0.6") {
+    // Cloth Config
+    include "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+    modApi ("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude group: "net.fabricmc.fabric-api"
     }
 }

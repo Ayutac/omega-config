@@ -13,8 +13,8 @@ public class OmegaTestClient implements ClientModInitializer {
         OmegaConfigGui.registerConfigScreen(OmegaTestMain.CONFIG);
 
         HudRenderCallback.EVENT.register((stack, delta) -> {
-            MinecraftClient.getInstance().textRenderer.draw(stack, Text.literal(String.valueOf(OmegaTestMain.CONFIG.v)), 15, 15, 0xffffff);
-            MinecraftClient.getInstance().textRenderer.draw(stack, Text.literal(String.valueOf(OmegaTestMain.CONFIG.doubleTest)), 15, 30, 0xffffff);
+            stack.drawText(MinecraftClient.getInstance().textRenderer, Text.literal(String.valueOf(OmegaTestMain.CONFIG.v)), 15, 15, 0xffffff, false);
+            stack.drawText(MinecraftClient.getInstance().textRenderer, Text.literal(String.valueOf(OmegaTestMain.CONFIG.doubleTest)), 15, 30, 0xffffff, false);
         });
     }
 }
